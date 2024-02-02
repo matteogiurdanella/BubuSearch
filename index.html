@@ -40,10 +40,11 @@
         function displayResponse() {
             // Get the input value
             var userInput = document.getElementById('searchInput').value;
-
+            var responseValue = userInput.toLowerCase() === "amore" ? "<p>Mua, Bubu</p>" : "<p>Bubu, it's Dudu, I love you</p>";
+            
             // Display the fixed response
             var responseContainer = document.getElementById('responseContainer');
-            responseContainer.innerHTML = '<p>Bubu, it\'s Dudu, I love you</p>';
+            responseContainer.innerHTML = responseValue
 
             // Prevent the form from submitting and refreshing the page
             return false;
